@@ -7,20 +7,34 @@ const $multiply = document.getElementById("btn-multiply");
 const $divide = document.getElementById("btn-divide");
 
 let calcResult = document.getElementById("calc-result");
-
+let ans;
 
 $add.onclick = function () {
-    calcResult.innerText = parseInt($num1.value) + parseInt($num2.value);
+    ans = parseInt($num1.value) + parseInt($num2.value);
+    overwrite();
 };
 
 $subtract.onclick = function () {
-    calcResult.innerText =  parseInt($num1.value) - parseInt($num2.value);
+    ans =  parseInt($num1.value) - parseInt($num2.value);
+    overwrite();
 };
 
 $multiply.onclick = function () {
-    calcResult.innerText = resultText = parseInt($num1.value) * parseInt($num2.value);
+    ans =  parseInt($num1.value) * parseInt($num2.value);
+    overwrite();
 };
 
 $divide.onclick = function () {
-    calcResult.innerText = parseInt($num1.value) / parseInt($num2.value);;
+    ans =  parseInt($num1.value) / parseInt($num2.value);
+    overwrite();
 };
+
+const overwrite = () => {
+    if ($num1.value && $num2.value) {
+        calcResult.innerText = ans;
+    } else {
+        calcResult.innerText = '数字を入力してください。';
+    }
+};
+
+
