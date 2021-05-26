@@ -10,17 +10,17 @@ let calcResult = document.getElementById("calc-result");
 
 
 $add.onclick = function () {
-    calcResult.innerText = parseInt(num1.value) + parseInt($num2.value);
+    calcResult.innerText = parseInt($num1.value) + parseInt($num2.value);
 };
 
 $subtract.onclick = function () {
-    calcResult.innerText =  parseInt(num1.value) - parseInt($num2.value);
+    calcResult.innerText =  parseInt($num1.value) - parseInt($num2.value);
 };
 
 $multiply.onclick = function () {
-    calcResult.innerText = resultText = parseInt(num1.value) * parseInt($num2.value);
+    calcResult.innerText = resultText = parseInt($num1.value) * parseInt($num2.value);
 };
 
 $divide.onclick = function () {
-    calcResult.innerText = parseInt(num1.value) / parseInt($num2.value);;
+    calcResult.innerText = parseInt($num1.value) / parseInt($num2.value);;
 };
